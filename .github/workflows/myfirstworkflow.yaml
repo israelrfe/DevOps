@@ -1,0 +1,21 @@
+name: My Workflow
+
+on:
+  push:
+  pull_request:
+  workflow_dispatch:
+  
+jobs:
+    myfisrtjob:
+               name: First Job
+               runs-on: ubuntu-latest
+               steps:
+               - name: Step One
+                 uses: actions/checkout@v3
+               - name: Step Two
+                 run: |
+                  touch newfile.yaml
+                  echo "Please Alex is Friday let me scape" >> newfile.yaml
+                  cat newfile.yaml
+                  pwd
+    
